@@ -1,0 +1,19 @@
+const List = ({ friends }) => {
+  return (
+    <div>
+      {friends.map((i) => {
+        const {id, name, image, age} = i;
+        return (
+          <article key={id} className="person">
+            <img src={image} alt={name} />
+            <div>
+              <h4>{name}</h4>
+              <p>{age} years</p>
+            </div>
+          </article>
+        )
+      })}
+    </div>
+  )
+}
+export default List
